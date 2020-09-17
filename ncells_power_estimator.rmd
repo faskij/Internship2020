@@ -1,4 +1,6 @@
+
 The objective of this document is to create an easy to use script for estimating power based on an input sample size of cells. This package, "ncells," created by The Jackson Laboratory, is a simulation of a two population model of an RNA-sequencing experiment.
+
 
 
 ```{r load libraries and package}
@@ -30,6 +32,7 @@ Argument descriptions (in order of fucntion):
 'seed_number' is the pseudonumber vector, default 123.  
 'replicates' is the number of replicates to estiamte the probability of success separation, default 1000, 100 <= replicates.  
 'cores' is the number of cores in the simulation, default = 1.  
+
 
 ```{r define argument; followed by range of argument}
 m = 0.1                    
