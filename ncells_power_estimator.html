@@ -374,7 +374,19 @@ summary {
 <pre class="r"><code>library(&#39;ncells&#39;)</code></pre>
 <p>Arguments in ‘ncells’ function (m1, pi1, foldchange, dropout, p = 20000, n = seq(100, 1000, by = 100), mu = 1, sigma = 5, type1 = 0.05, dfactor, seed = 123, B = 1000, ncore = 1)</p>
 <p>Example: ncells(m1=1.6, pi1=5, foldchange=4, dropout=.6, p=20000, mu=1, sigma=5)</p>
-<p>Argument descriptions (in order of fucntion): ‘m’ is the fraction of marker genes; 0.1 &lt;= m &lt;= 10 ‘pi’ is the percentage of subpopulation of cells in overall population; 5 &lt;= pi &lt;= 50 ‘fc’ is the expression fold change of desired subpopulation; 1 &lt;= fc &lt;= 32 ‘do’ is the dropout rate; 0.6 &lt;= do &lt;= 0.999 ‘unique_gene_count’ is the total number of unique genes in simulation; 10000 &lt;= unique_gene_count ‘number_cells’ is the vector of total number of cells one would like to examine power on; 50 &lt;= min(number_cells), max(number_cells) &lt;= 1000000 ‘mean_expression’ (default = 1) ‘standard_deviation’ of mean gene expressions (default = 5) ‘alpha’ is the type 1 error rate, default = 0.05 ‘dfactor’ is an option, Cutoff values to declare separation, depends on type 1 error rate ‘seed_number’ is the pseudonumber vector, default 123 ‘replicates’ is the number of replicates to estiamte the probability of success separation, default 1000, 100 &lt;= replicates ‘cores’ is the number of cores in the simulation, default = 1</p>
+<p>Argument descriptions (in order of fucntion): ‘m’ is the fraction of marker genes; 0.1 &lt;= m &lt;= 10.<br />
+‘pi’ is the percentage of subpopulation of cells in overall population; 5 &lt;= pi &lt;= 50.<br />
+‘fc’ is the expression fold change of desired subpopulation; 1 &lt;= fc &lt;= 32.<br />
+‘do’ is the dropout rate; 0.6 &lt;= do &lt;= 0.999.<br />
+‘unique_gene_count’ is the total number of unique genes in simulation; 10000 &lt;= unique_gene_count.<br />
+‘number_cells’ is the vector of total number of cells one would like to examine power on; 50 &lt;= min(number_cells), max(number_cells) &lt;= 1000000.<br />
+‘mean_expression’ (default = 1).<br />
+‘standard_deviation’ of mean gene expressions (default = 5).<br />
+‘alpha’ is the type 1 error rate, default = 0.05.<br />
+‘dfactor’ is an option, Cutoff values to declare separation, depends on type 1 error rate.<br />
+‘seed_number’ is the pseudonumber vector, default 123.<br />
+‘replicates’ is the number of replicates to estiamte the probability of success separation, default 1000, 100 &lt;= replicates.<br />
+‘cores’ is the number of cores in the simulation, default = 1.</p>
 <pre class="r"><code>m = 0.1                    
 pi = 5                     
 fc =  2                    
