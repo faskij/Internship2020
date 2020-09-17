@@ -1,4 +1,4 @@
-# The objective of this document is to create an easy to use script for estimating power based on an input sample size of cells. This package, "ncells," created by The Jackson Laboratory, is a simulation of a two population model of an RNA-sequencing experiment.
+The objective of this document is to create an easy to use script for estimating power based on an input sample size of cells. This package, "ncells," created by The Jackson Laboratory, is a simulation of a two population model of an RNA-sequencing experiment.
 
 
 ```{r load libraries and package}
@@ -8,28 +8,43 @@ library('ncells')
 ```
 
 
-# Arguments in 'ncells'
-#function (m1, pi1, foldchange, dropout, p = 20000, n = seq(100, 
-#    1000, by = 100), mu = 1, sigma = 5, type1 = 0.05, dfactor, 
-#    seed = 123, B = 1000, ncore = 1) 
+Arguments in 'ncells'
+function (m1, pi1, foldchange, dropout, p = 20000, n = seq(100, 
+    1000, by = 100), mu = 1, sigma = 5, type1 = 0.05, dfactor, 
+    seed = 123, B = 1000, ncore = 1) 
 
-#Example:
-# ncells(m1=1.6, pi1=5, foldchange=4, dropout=.6, p=20000, mu=1, sigma=5)
+Example:
+ ncells(m1=1.6, pi1=5, foldchange=4, dropout=.6, p=20000, mu=1, sigma=5)
+
+Argument descriptions (in order of fucntion):
+'m' is the fraction of marker genes;  0.1 <= m <= 10.  
+'pi' is the percentage of subpopulation of cells in overall population; 5 <= pi <= 50.  
+'fc' is the expression fold change of desired subpopulation; 1 <= fc <= 32.  
+'do' is the dropout rate; 0.6 <= do <= 0.999.  
+'unique_gene_count' is the total number of unique genes in simulation; 10000 <= unique_gene_count.  
+'number_cells' is the vector of total number of cells one would like to examine power on; 50 <= min(number_cells), max(number_cells) <= 1000000.  
+'mean_expression' (default = 1).  
+'standard_deviation' of mean gene expressions (default = 5).  
+'alpha' is the type 1 error rate, default = 0.05.  
+'dfactor' is an option, Cutoff values to declare separation, depends on type 1 error rate.  
+'seed_number' is the pseudonumber vector, default 123.  
+'replicates' is the number of replicates to estiamte the probability of success separation, default 1000, 100 <= replicates.  
+'cores' is the number of cores in the simulation, default = 1.  
 
 ```{r define argument; followed by range of argument}
-m = 0.1                    # fraction of marker genes;  0.1 <= m <= 10
-pi = 5                     # Percentage of subpopulation of cells in overall population; 5 <= pi <= 50
-fc =  2                    # Expression fold change of desired subpopulation; 1 <= fc <= 32
-do =  0.6                  # dropout rate; 0.6 <= do <= 0.999
-unique_gene_count = 10000  # Total number of unique genes in simulation; 10000 <= unique_gene_count
-number_cells = 100         # Vector of total number of cells; 50 <= min(number_cells), max(number_cells) <= 1000000
-mean_expression =  1       # (default = 1)
-standard_deviation=  5     # Standard deviation of mean gene expressions (default = 5)
-alpha = 0.05               # type 1 error rate, default = 0.05
-#dfactor=TRUE              # Option, Cutoff values to declare separation, depends on type 1 error rate
-seed_number = 123          # pseudonumber vector, default 123
-replicates =  1000         # Number of replicates to estiamte the probability of success separation, default 1000, 100 <= replicates
-cores = 1                  # number of cores in the simulation, default = 1
+m = 0.1                    
+pi = 5                     
+fc =  2                    
+do =  0.6                  
+unique_gene_count = 10000  
+number_cells = 100        
+mean_expression =  1       
+standard_deviation=  5     
+alpha = 0.05               
+dfactor=TRUE              
+seed_number = 123          
+replicates =  1000         
+cores = 1                  
 ```
 
 
