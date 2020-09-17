@@ -39,9 +39,7 @@ cores = 1                  # number of cores in the simulation, default = 1
 # This may take some time to run
 ```{r, put it together}
 
-sample_size_estimate <- ncells(m1 = m, pi1=pi, foldchange = fc, dropout = do, p = unique_gene_count, n = number_cells, mu = mean_expression, sigma = standard_deviation, type1 = alpha, dfactor, seed = seed_number, B = replicates, ncore = cores)
-
-sample_size_estimate
+ncells(m1 = m, pi1=pi, foldchange = fc, dropout = do, p = unique_gene_count, n = number_cells, mu = mean_expression, sigma = standard_deviation, type1 = alpha, dfactor, seed = seed_number, B = replicates, ncore = cores)
 
 ```
 
